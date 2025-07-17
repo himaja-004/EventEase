@@ -9,13 +9,13 @@ export default function Navbar() {
   const handleLocationChange = (e) => {
     const newLocation = e.target.value;
     setLocation(newLocation);
-    localStorage.setItem('filterLocation', newLocation); // store for filtering
+    localStorage.setItem('filterLocation', newLocation); 
   };
 
   const handleSearch = (e) => {
     if (e.key === 'Enter') {
       localStorage.setItem('filterSearch', searchTerm);
-      navigate('/'); // redirect to homepage where filtered events are shown
+      navigate('/'); 
     }
   };
 
@@ -29,7 +29,7 @@ export default function Navbar() {
         </Link>
       </h1>
 
-      {/* Search bar */}
+      
       <div className="flex-1 md:mx-6 w-full md:w-auto">
         <input
           type="text"
@@ -41,7 +41,7 @@ export default function Navbar() {
         />
       </div>
 
-      {/* Nav links + dropdown */}
+      
       <div className="flex items-center space-x-4">
         <div className="hidden sm:flex space-x-4 text-sm sm:text-base font-medium">
           <Link to="/" className="hover:text-yellow-200 transition duration-200">
